@@ -83,11 +83,11 @@
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="更新Hexo安装使用教程">
-<meta property="og:url" content="http://yoursite.com/2019/07/26/hello-world/index.html">
+<meta property="og:url" content="https://github.com/Smilefrank/2019/07/26/hello-world/index.html">
 <meta property="og:site_name" content="Smile_frank的博客">
 <meta property="og:description" content="写在前面 Hexo框架Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  准备工作1.Node.js安装2.Git安装（Xcode自带有Git环境） 检查是否安装成功1node -v // 如果可以看到版本信息，说明安装成功  1git --version // 如果可以看到版本信息，说明安装成功">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-31T01:38:55.453Z">
+<meta property="og:updated_time" content="2019-08-12T09:47:50.896Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="更新Hexo安装使用教程">
 <meta name="twitter:description" content="写在前面 Hexo框架Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。  准备工作1.Node.js安装2.Git安装（Xcode自带有Git环境） 检查是否安装成功1node -v // 如果可以看到版本信息，说明安装成功  1git --version // 如果可以看到版本信息，说明安装成功">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/07/26/hello-world/">
+  <link rel="canonical" href="https://github.com/Smilefrank/2019/07/26/hello-world/">
 
 
 
@@ -191,6 +191,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -228,12 +238,12 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-categories" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Smilefrank/2019/07/26/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="汪保锋">
@@ -319,7 +329,7 @@
 <p>检查版本，成功看到版本号，安装成功！</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure>
 
-<h2 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h2><p>1.首先去<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>注册一个GitHub账号</p>
+<h2 id="GitHub创建个人仓库"><a href="#GitHub创建个人仓库" class="headerlink" title="GitHub创建个人仓库"></a>GitHub创建个人仓库</h2><p>1.首先去<a href="https://github.com/">GitHub</a>注册一个GitHub账号</p>
 <p>2.注册完登录后，在GitHub.com中看到一个New repository，新建仓库</p>
 <p>3.创建一个和你用户名相同的仓库，<a href>后面加.github.io</a>，只有这样，将来要部署到GitHub page的时候，才会被识别，<a href>也就是xxxx.github.io</a>，其中xxx就是你注册GitHub的用户名。我这里是已经建过了。</p>
 <p>4.点击create repository</p>
@@ -349,14 +359,47 @@
 <p>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
+<p>如果执行出现问题请参考（<a href="https://blog.csdn.net/wxb880114/article/details/94819436" target="_blank" rel="noopener">权限问题</a>）</p>
 <p>然后</p>
 <figure class="highlight plain"><figcaption><span>clean</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>其中 <code>hexo clean</code>清除了你之前生成的东西，也可以不加。<br><code>hexo generate</code> 顾名思义，生成静态文章，可以用 <code>hexo g</code>缩写<br><code>hexo deploy</code> 部署文章，可以用<code>hexo d</code>缩写</p>
 <p>过一会儿就可以在<code>http://yourname.github.io</code> 这个网站看到你的博客了！！</p>
 <h2 id="写新文章"><a href="#写新文章" class="headerlink" title="写新文章"></a>写新文章</h2><p>接下来你就可以正式开始写文章了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new newpapername</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line"></span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line"></span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
+<p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>文件/文件夹</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>_config.yml</td>
+<td>配置文件</td>
+</tr>
+<tr>
+<td>public</td>
+<td>生成的静态文件，这个目录最终会发布到服务器</td>
+</tr>
+<tr>
+<td>scaffolds</td>
+<td>一些通用的markdown模板</td>
+</tr>
+<tr>
+<td>source</td>
+<td>编写的markdown文件，_drafts草稿文件，_posts发布的文章</td>
+</tr>
+<tr>
+<td>themes</td>
+<td>博客的模板</td>
+</tr>
+</tbody></table>
 <p>然后在source/_post中打开markdown文件，就可以开始编辑了。这里我推荐<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>一个MarKdown编辑器,可以直接可视化的编写。</p>
 <p>编写之后，在进行下面的重复操作。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
@@ -370,7 +413,49 @@
     
 
     
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/path/to/your/wechatqcode ex. /uploads/wechat-qcode.jpg" alt="汪保锋 wechat" style="width: 200px; max-width: 100%;">
+    <div>ex. subscribe to my blog by scanning my public wechat account</div>
+</div>
 
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>欢迎关注，共同进步</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="汪保锋 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/wechatpay.jpg" alt="汪保锋 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="images/wechatpay.jpg" alt="汪保锋 比特币">
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -388,6 +473,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/05/categories/" rel="prev" title="文章分类">
+                文章分类 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -461,7 +562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -484,6 +585,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Smilefrank" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:813589616@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
